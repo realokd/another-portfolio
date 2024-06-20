@@ -1,16 +1,12 @@
 {
-  "name": "harsh-web-3",
+  "name": "thecv_portfolio",
   "version": "0.1.0",
   "private": true,
-  "author": {
-    "name": "Harsh Goel",
-    "email": "harshgoel05@gmail.com",
-    "url": "https://harshgoel.me"
-  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
+    "static-build": "next build && next export",
     "export": "next export",
     "lint": "eslint --fix .",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc --ignore-path .gitignore",

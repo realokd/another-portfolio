@@ -17,7 +17,7 @@ const HomePage = (): JSX.Element => {
           {/* <WordCloud /> */}
           <Projects />
           <Contact />
-          <RepoDetails />
+          {/* <RepoDetails /> */}
         </div>
       </div>
     </>

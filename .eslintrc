@@ -50,5 +50,5 @@
     "amd": true,
     "node": true
   },
-  "ignorePatterns": ["./.next/*"]
+  "ignorePatterns": ["./.next/*", "./eslintrc.js"]
 }

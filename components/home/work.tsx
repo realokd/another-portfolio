@@ -8,7 +8,7 @@ export default function Work(): JSX.Element {
   const personalDetails: PersonalDetails = useContext(PersonalDetailsContext);
   return (
     <>
-      <div className="relative h-auto py-10 lg:py-20">
+      <div className="relative h-auto py-10 lg:py-20" id="work">
         <img
           src="/images/vectors/circle-spin.svg"
           alt="Circle Vector"
@@ -26,12 +26,12 @@ export default function Work(): JSX.Element {
               <HeaderSmall text="What does he do?" />
               <h1 className="mb-3 mt-1 text-7xl sm:text-5xl md:text-7xl lg:text-4xl font-normal tracking-wide text-white leading-normal lg:leading-7">
                 Currently enhancing travelling at{' '}
-                <span className="text-pink font-bold">{personalDetails.work.company}</span> as a
+                <span className="text-pink font-bold">{personalDetails.work?.company}</span> as a
               </h1>
               <h1 className="mb-3 mt-6 text-4xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-1xl font-extrabold text-white leading-none ">
-                {personalDetails.work.designation}
+                {personalDetails.work?.designation}
               </h1>
-              <div className="sm:ml-52 xl:ml-96">
+              {/* <div className="sm:ml-52 xl:ml-96">
                 <Link href="/work">
                   <img
                     src="/images/vectors/arrows-right.svg"
@@ -39,12 +39,12 @@ export default function Work(): JSX.Element {
                     className="w-14 mt-10 sm:mt-0 transform-all animate-translateright"
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col items-center justify-center">
             <img
-              src={personalDetails.work.logo}
+              src={personalDetails.work?.logo}
               alt="Works at"
               className="w-48 lg:w-full p-10 sm:p-24 md:p-4 lg:p-24"
             />

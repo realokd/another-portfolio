@@ -5,6 +5,7 @@ import TextCards from 'shared/components/text-cards';
 import { Button, HeaderSmall, ProjectCard } from '@shared-components';
 import { ProjectDetailsContext } from 'shared/utils/contexts';
 import { Project } from 'shared/utils/types';
+import { ProjectObject } from '@utils/staticData';
 
 export default function Projects(): JSX.Element {
   const router = useRouter();
@@ -12,7 +13,7 @@ export default function Projects(): JSX.Element {
   return (
     <>
       <div>
-        <div className="relative h-auto py-10 lg:py-20">
+        <div className="relative h-auto py-10 lg:py-20" id="projects">
           <img
             src="/images/vectors/heart.svg"
             alt="Circle Vector"
@@ -38,7 +39,7 @@ export default function Projects(): JSX.Element {
                   Something he has <span className="text-pink font-bold">built.</span>
                 </h1>
                 <div className="sm:ml-52 xl:ml-96 transform rotate-90">
-                  <Link href="#projects">
+                  <Link href="#projectCards">
                     <img
                       src="/images/vectors/arrows-right.svg"
                       alt="Next"
@@ -59,8 +60,8 @@ export default function Projects(): JSX.Element {
               </div>
               <div className="w-64 h-auto my-4 sm:ml-40 sm:-my-6 lg:ml-60 lg:-my-10 shadow-light-xl hover:shadow-light-3xl transform transition-all duration-300 hover:scale-110 z-auto">
                 <TextCards
-                  heading="Apps"
-                  text="The art of creating some awesome smartphone applications using React Native."
+                  heading="Backend"
+                  text="The art of creating some powerful Backend applications using Django and MySQL."
                   color="pink"
                 />
               </div>
@@ -74,23 +75,25 @@ export default function Projects(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16" id="projects">
+        <div
+          className="relative h-auto sm:h-auto md:h-auto ml-4 sm:mx-12 md:mx-16"
+          id="projectCards">
           <div className="grid md:grid-cols-2 gap-4 place-items-center">
-            {projectDetails.map((project: Project) => (
+            {ProjectObject.map((project: Project) => (
               <ProjectCard
                 project={project}
-                key={project.slug}
+                key={project.name}
                 filter={{ key: 'featured', value: true }}
               />
             ))}
           </div>
-          <div className="flex justify-center mt-10 lg:mt-4">
+          {/* <div className="flex justify-center mt-10 lg:mt-4">
             <Button
               type="solid"
               text="Show me more! 🔥"
               onClickHandler={() => router.push('/projects')}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

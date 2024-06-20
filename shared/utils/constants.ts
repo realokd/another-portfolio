@@ -4,20 +4,20 @@ const navlinks = [
     href: '/'
   },
   {
-    title: 'Explore',
+    title: 'Skills',
     href: '/#skills'
   },
   {
     title: 'Work',
-    href: '/work'
+    href: '/#work'
   },
   {
     title: 'Projects',
-    href: '/projects'
+    href: '/#projects'
   },
   {
     title: 'Contact',
-    href: '/connect'
+    href: '/#connect'
   }
 ];
 

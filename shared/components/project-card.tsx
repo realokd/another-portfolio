@@ -22,15 +22,15 @@ const ProjectCard = ({ project, filter }: Props): JSX.Element => {
     show = true;
   }
   return (
-    show && (
+    true && (
       <>
         <Tilt className="Tilt cursor-pointer" options={{ max: 25 }}>
           <div
             className="my-4 mx-8 lg:mx-16 rounded-2xl
             transition-all duration-300 transform hover:opacity-80 hover:shadow-violet-5xl">
-            <Link href={`/project/${project.slug}`}>
+            <a href={project.github} target="_blank">
               <img src={project.img} alt={project.name} className="rounded-2xl" />
-            </Link>
+            </a>
           </div>
         </Tilt>
       </>

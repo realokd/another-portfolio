@@ -2,8 +2,12 @@ import { Skill } from './types';
 
 const SKILLS: Skill[] = [
   {
-    name: 'MongoDB',
-    src: '/images/skills/mongodb.svg'
+    name: 'Python',
+    src: '/images/skills/python.svg'
+  },
+  {
+    name: 'Django',
+    src: '/images/skills/django.png'
   },
   {
     name: 'NodeJS',
@@ -22,20 +26,8 @@ const SKILLS: Skill[] = [
     src: '/images/skills/ts.svg'
   },
   {
-    name: 'React Native',
-    src: '/images/skills/react-native.svg'
-  },
-  {
-    name: 'ExpressJS',
-    src: '/images/skills/angular.svg'
-  },
-  {
-    name: 'MongoDB',
-    src: '/images/skills/express.svg'
-  },
-  {
-    name: 'Figma',
-    src: '/images/skills/figma.svg'
+    name: 'mysql',
+    src: '/images/skills/mysql.svg'
   },
   {
     name: 'NextJs',

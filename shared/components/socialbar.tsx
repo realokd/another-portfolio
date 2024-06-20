@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { PersonalDetailsContext } from '@utils/contexts';
 import { PersonalDetails } from '@utils/types';
+import { SocialMediaObject } from '@utils/staticData';
 
 interface Props {
   link: string;
@@ -25,7 +26,7 @@ export default function SocialBar(): JSX.Element {
   return (
     <div className="fixed left-3 md:left-5 bottom-0 z-30">
       <div className="flex flex-col  justify-center items-center ">
-        {socialMedia.map((item) => {
+        {SocialMediaObject?.map((item) => {
           return (
             <SocialIcon
               link={item.link}
